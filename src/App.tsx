@@ -79,10 +79,9 @@ function App() {
           </Toolbar>
         </AppBar>
         <Switch>
-          <Route  path="/" component={Home} />
-          <Route  path="/news" component={News} />
+          <Route exact path="/" component={Home} />
+          <Route path="/news" component={News} />
           <Route
-            
             path="/profile"
             render={() =>
               isAuthenticated ? (
@@ -93,13 +92,15 @@ function App() {
             }
           />
           <Route
-            
             path="/login"
             render={() =>
               isAuthenticated ? (
                 <Redirect to="/profile" />
               ) : (
-                <Login isAuthenticated={isAuthenticated} setIsAuthenticated={handleLogin} />
+                <Login
+                  isAuthenticated={isAuthenticated}
+                  setIsAuthenticated={handleLogin}
+                />
               )
             }
           />
