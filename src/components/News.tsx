@@ -1,26 +1,48 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Post } from '../types';
+import { NewsProps, Post } from '../types';
 import { getPosts } from '../api';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
-type NewsProps = {
-  title: string;
-};
-
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   container: {
+    width: '600px',
+    height: '300px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: '2rem',
+    marginTop: theme.spacing(4),
   },
   button: {
-    margin: '1rem',
+    margin: theme.spacing(2),
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
+    '&:hover': {
+      backgroundColor: theme.palette.primary.dark,
+    },
   },
-});
+  postContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: theme.spacing(3),
+    padding: theme.spacing(3),
+    border: `1px solid ${theme.palette.primary.main}`,
+    borderRadius: theme.shape.borderRadius,
+    boxShadow: theme.shadows[3],
+  },
+  postTitle: {
+    fontSize: '2rem',
+    marginBottom: theme.spacing(2),
+    color: theme.palette.primary.main,
+  },
+  postBody: {
+    fontSize: '1.2rem',
+    marginBottom: theme.spacing(2),
+    textAlign: 'justify',
+  },
+}));
 
 const News = ({ title }: NewsProps) => {
   const { t } = useTranslation();
@@ -45,13 +67,12 @@ const News = ({ title }: NewsProps) => {
     <div className={classes.container}>
       <h1>{title}</h1>
       {posts.map((post) => (
-        <div key={post.id}>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
+        <div className={classes.postContainer} key={post.id}>
+          <h2 className={classes.postTitle}>{post.title}</h2>
+          <p className={classes.postBody}>{post.body}</p>
           <Button
             className={classes.button}
             variant="contained"
-            color="secondary"
             onClick={() => handleDelete(post.id)}
           >
             {t('Delete')}

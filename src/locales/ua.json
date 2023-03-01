@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "Шаблон React TypeScript",
+    "home": "Головна",
+    "profile": "Профіль",
+    "news": "Новини"
+  },
+  "home": {
+    "title": "Ласкаво просимо на наш веб-сайт!",
+    "subtitle": "Це зразок веб-сайту, побудованого з React та TypeScript.",
+    "button": "Дізнатись більше",
+    "content": "Ми - команда досвідчених розробників та дизайнерів, присвячених створенню виняткових вебсайтів та додатків."
+  },
+  "profile": {
+    "name": "Іван Іванович",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero ac mi posuere bibendum.",
+    "skills": "Навички",
+    "projects": "Проекти"
+  },
+  "news": {
+    "title": "Новини",
+    "delete": "Видалити",
+    "loadMore": "Завантажити ще"
+  }
+}

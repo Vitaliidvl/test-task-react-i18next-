@@ -1,0 +1,25 @@
+{
+  "header": {
+    "title": "React TypeScript Template",
+    "home": "Home",
+    "profile": "Profile",
+    "news": "News"
+  },
+  "home": {
+    "title": "Welcome to our website!",
+    "subtitle": "This is a sample website built with React and TypeScript.",
+    "button": "Learn More",
+    "content": "We are a company that specializes in creating high-quality websites and applications for businesses of all sizes."
+  },
+  "profile": {
+    "name": "John Doe",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero ac mi posuere bibendum.",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "news": {
+    "title": "News",
+    "delete": "Delete",
+    "loadMore": "Load More"
+  }
+}
