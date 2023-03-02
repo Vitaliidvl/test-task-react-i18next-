@@ -1,3 +1,5 @@
+import store from '../store';
+
 export type Post = {
   userId: number;
   id: number;
@@ -12,3 +14,4 @@ export type ProfileProps = {
 export type NewsProps = {
   title: string;
 };
+export type AppDispatch = typeof store.dispatch;

@@ -105,7 +105,7 @@ function Profile({ isAuthenticated }: ProfileProps) {
     <div className={classes.root}>
       <Avatar
         className={classes.avatar}
-        alt={t('user-profile-picture')}
+        alt="picture"
         src="https://picsum.photos/200"
       />
       <Typography className={classes.name} variant="h1" align="center">
