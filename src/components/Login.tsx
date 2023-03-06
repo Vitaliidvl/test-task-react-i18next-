@@ -36,7 +36,7 @@ const Login: React.FC<LoginProps> = ({ isAuthenticated, setIsAuthenticated }) =>
   const { t } = useTranslation();
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [errorMessage, setErrorMessage] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string | null>('');
   const history = useHistory();
   const classes = useStyles();
 
