@@ -43,6 +43,10 @@ const Login: React.FC<LoginProps> = ({ isAuthenticated, setIsAuthenticated }) =>
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    if (localStorage.getItem('isAuthenticated')) {
+      setIsAuthenticated(true);
+    }
+
     if (username === 'admin' && password === '12345') {
       setIsAuthenticated(true);
       localStorage.setItem('isAuthenticated', 'true');
