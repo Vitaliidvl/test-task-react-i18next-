@@ -17,7 +17,6 @@ import Login from './components/Login';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      // height: '100vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

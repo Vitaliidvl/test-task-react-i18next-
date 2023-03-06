@@ -10,8 +10,8 @@ import uaTranslation from './locales/ua.json';
 import store from './store';
 
 i18next.use(initReactI18next).init({
-  interpolation: { escapeValue: false }, // React already does escaping
-  lng: 'en', // language to use
+  interpolation: { escapeValue: false },
+  lng: 'en',
   resources: {
     en: {
       translation: enTranslation,

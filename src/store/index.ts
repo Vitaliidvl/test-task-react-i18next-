@@ -12,6 +12,5 @@ export type AppThunk<ReturnType = void> = ThunkAction<
 export default configureStore({
   reducer: {
     posts: postsSlice,
-    // add more reducers here
   },
 });
